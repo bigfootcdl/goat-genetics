@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #f7f3ec;
+  --color-brand-100: #ede3d1;
+  --color-brand-200: #dcc7a3;
+  --color-brand-500: #9a6b33;
+  --color-brand-600: #7f5626;
+  --color-brand-700: #65431e;
+  --color-brand-900: #3a2711;
+  --color-field-600: #4d6b3a;
+  --color-field-700: #3d562e;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: #fbf9f5;
+  color: #1f1a14;
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition disabled:opacity-50;
+}
+
+@utility btn-primary {
+  @apply btn bg-brand-600 text-white hover:bg-brand-700;
+}
+
+@utility btn-secondary {
+  @apply btn border border-stone-300 bg-white text-stone-800 hover:bg-stone-50;
+}
+
+@utility btn-danger {
+  @apply btn border border-red-300 bg-white text-red-700 hover:bg-red-50;
+}
+
+@utility input {
+  @apply block w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500;
+}
+
+@utility label {
+  @apply mb-1 block text-sm font-medium text-stone-700;
+}
+
+@utility card {
+  @apply rounded-lg border border-stone-200 bg-white shadow-sm;
+}
+
+@utility badge {
+  @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium;
+}
+
+@utility h1 {
+  @apply text-2xl font-semibold tracking-tight text-stone-900;
+}
+
+@utility h2 {
+  @apply text-lg font-semibold text-stone-900;
+}
+
+@utility muted {
+  @apply text-sm text-stone-500;
+}
